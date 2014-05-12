@@ -1,0 +1,2 @@
+## `fun/array/trampoline-filter`
+

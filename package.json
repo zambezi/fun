@@ -1,0 +1,31 @@
+{
+  "name": "fun",
+  "version": "1.4.0",
+  "description": "Functional goodies from the platform team",
+  "devDependencies": {
+    "ez-doc": "github:zambezi/ez-doc",
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-karma": "~0.10.1",
+    "karma": "~0.12.31",
+    "karma-chrome-launcher": "~0.1.7",
+    "karma-mocha": "~0.1.0",
+    "karma-requirejs": "~0.2.2",
+    "karma-sinon-chai": "~0.1.4",
+    "karma-teamcity-reporter": "~0.1.1"
+  },
+  "scripts": {
+    "ci-test": "grunt karma:ci-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zambezi/fun.git"
+  },
+  "_zambezi": {
+    "type": "library"
+  },
+  "license": "MIT"
+}

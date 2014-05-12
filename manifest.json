@@ -1,0 +1,45 @@
+{
+   "scripts" : {
+      "zap/fun/string/lower" : {
+         "debug" : "fun-min.js",
+         "release" : "fun-min.js"
+      },
+      "zap/fun/string/append" : {
+         "debug" : "fun-min.js",
+         "release" : "fun-min.js"
+      },
+      "zap/fun/shift-arguments" : {
+         "debug" : "fun-min.js",
+         "release" : "fun-min.js"
+      },
+      "zap/fun/some-result" : {
+         "debug" : "fun-min.js",
+         "release" : "fun-min.js"
+      },
+      "zap/fun/negate" : {
+         "debug" : "fun-min.js",
+         "release" : "fun-min.js"
+      },
+      "zap/fun/property" : {
+         "debug" : "fun-min.js",
+         "release" : "fun-min.js"
+      },
+      "zap/fun/compare-with" : {
+         "debug" : "fun-min.js",
+         "release" : "fun-min.js"
+      },
+      "zap/fun/multiply" : {
+         "debug" : "fun-min.js",
+         "release" : "fun-min.js"
+      },
+      "zap/fun/string/upper" : {
+         "debug" : "fun-min.js",
+         "release" : "fun-min.js"
+      },
+      "zap/fun/string/prepend" : {
+         "debug" : "fun-min.js",
+         "release" : "fun-min.js"
+      }
+   },
+   "type" : "library"
+}
