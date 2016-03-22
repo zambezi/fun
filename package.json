@@ -1,5 +1,5 @@
 {
-  "name": "fun",
+  "name": "@zambezi/fun",
   "version": "1.4.0",
   "description": "Functional goodies from the platform team",
   "devDependencies": {
@@ -23,9 +23,6 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:zambezi/fun.git"
-  },
-  "_zambezi": {
-    "type": "library"
   },
   "license": "MIT"
 }
