@@ -1,6 +1,6 @@
 {
   "name": "@zambezi/fun",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Functional goodies from the platform team",
   "devDependencies": {
     "ez-doc": "github:zambezi/ez-doc",
