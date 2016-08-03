@@ -1,4 +1,5 @@
+export { functor } from './functor'
 export { identity } from './identity'
 export { negate } from './negate'
 export { property } from './property'
-export { functor } from './functor'
+export { replaceArrayContents } from './replace-array-contents'
