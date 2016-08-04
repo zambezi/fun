@@ -1,3 +1,4 @@
+export { batch } from './batch'
 export { functor } from './functor'
 export { identity } from './identity'
 export { negate } from './negate'
