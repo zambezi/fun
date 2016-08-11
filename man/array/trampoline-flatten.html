@@ -1,0 +1,898 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        
+        <title>trampoline-flatten | Fun!</title>
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        
+  
+    
+    <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-zambezi-docs/styles.css">
+    
+  
+    
+    <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+    
+  
+    
+    <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-search/search.css">
+    
+  
+    
+    <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+    
+  
+  
+
+        
+  
+  
+  <link rel="next" href="../../man/array/trampoline-merge-sort.html" />
+  
+  
+  <link rel="prev" href="../../man/array/trampoline-filter.html" />
+  
+
+        
+    </head>
+    <body>
+        
+        
+<div class="book" data-level="2.12" data-chapter-title="trampoline-flatten" data-filepath="man/array/trampoline-flatten.md" data-basepath="../.." data-revision="Thu Aug 11 2016 11:57:45 GMT+0200 (CEST)">
+  
+
+<nav class="book-summary" role="navigation">
+  <ul class="summary">
+    
+    
+    
+    
+
+    
+
+    
+  
+    <li class="chapter chapter-root"
+        data-level="0"
+        
+          data-path="index.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="Introduction" href="../../index.html">
+        
+            Introduction
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="1"
+        
+          data-path="CONTRIBUTING.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="How to contribute" href="../../CONTRIBUTING.html">
+        
+            How to contribute
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root chapter-list"
+        data-level="2"
+        >
+      
+        <span class="chapter-title" data-title="Array">Array</span>
+      
+      
+        <ul class="articles">
+          
+  
+    <li class="chapter"
+        data-level="2.1"
+        
+          data-path="man/array/difference.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="difference" href="../../man/array/difference.html">
+        
+            difference
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="2.2"
+        
+          data-path="man/array/flatten-by.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="flatten-by" href="../../man/array/flatten-by.html">
+        
+            flatten-by
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="2.3"
+        
+          data-path="man/array/flatten.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="flatten" href="../../man/array/flatten.html">
+        
+            flatten
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="2.4"
+        
+          data-path="man/array/index-on.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="index-on" href="../../man/array/index-on.html">
+        
+            index-on
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="2.5"
+        
+          data-path="man/array/is-array-like.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="is-array-like" href="../../man/array/is-array-like.html">
+        
+            is-array-like
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="2.6"
+        
+          data-path="man/array/is-array.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="is-array" href="../../man/array/is-array.html">
+        
+            is-array
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="2.7"
+        
+          data-path="man/array/replace-contents.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="replace-contents" href="../../man/array/replace-contents.html">
+        
+            replace-contents
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="2.8"
+        
+          data-path="man/array/reverse.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="reverse" href="../../man/array/reverse.html">
+        
+            reverse
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="2.9"
+        
+          data-path="man/array/symmetric-difference.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="symmetric-difference" href="../../man/array/symmetric-difference.html">
+        
+            symmetric-difference
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="2.10"
+        
+          data-path="man/array/to-array.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="to-array" href="../../man/array/to-array.html">
+        
+            to-array
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="2.11"
+        
+          data-path="man/array/trampoline-filter.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="trampoline-filter" href="../../man/array/trampoline-filter.html">
+        
+            trampoline-filter
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter active"
+        data-level="2.12"
+        
+          data-path="man/array/trampoline-flatten.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="trampoline-flatten" href="../../man/array/trampoline-flatten.html">
+        
+            trampoline-flatten
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="2.13"
+        
+          data-path="man/array/trampoline-merge-sort.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="trampoline-merge-sort" href="../../man/array/trampoline-merge-sort.html">
+        
+            trampoline-merge-sort
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="2.14"
+        
+          data-path="man/array/union.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="union" href="../../man/array/union.html">
+        
+            union
+          </a>
+      
+      
+    </li>
+  
+
+        </ul>
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="3"
+        
+          data-path="man/array/join.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="join" href="../../man/array/join.html">
+        
+            join
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="4"
+        
+          data-path="man/batch.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="batch" href="../../man/batch.html">
+        
+            batch
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="5"
+        
+          data-path="man/greater-than.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="greater-than" href="../../man/greater-than.html">
+        
+            greater-than
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="6"
+        
+          data-path="man/instantiate.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="instantiate" href="../../man/instantiate.html">
+        
+            instantiate
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="7"
+        
+          data-path="man/logical-operators.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="logical-operators" href="../../man/logical-operators.html">
+        
+            logical-operators
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="8"
+        
+          data-path="man/modulo.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="modulo" href="../../man/modulo.html">
+        
+            modulo
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="9"
+        
+          data-path="man/multiply.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="multiply" href="../../man/multiply.html">
+        
+            multiply
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="10"
+        
+          data-path="man/negate.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="negate" href="../../man/negate.html">
+        
+            negate
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="11"
+        
+          data-path="man/property.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="property" href="../../man/property.html">
+        
+            property
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="12"
+        
+          data-path="man/some-result.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="some-result" href="../../man/some-result.html">
+        
+            some-result
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="13"
+        
+          data-path="man/sum.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="sum" href="../../man/sum.html">
+        
+            sum
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="14"
+        
+          data-path="man/tap.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="tap" href="../../man/tap.html">
+        
+            tap
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="15"
+        
+          data-path="man/transpose-arguments.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="transpose-arguments" href="../../man/transpose-arguments.html">
+        
+            transpose-arguments
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root chapter-list"
+        data-level="16"
+        >
+      
+        <span class="chapter-title" data-title="Compare">Compare</span>
+      
+      
+        <ul class="articles">
+          
+  
+    <li class="chapter"
+        data-level="16.1"
+        
+          data-path="man/compare/compare-against.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="compare-against" href="../../man/compare/compare-against.html">
+        
+            compare-against
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="16.2"
+        
+          data-path="man/compare/compare-on.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="compare-on" href="../../man/compare/compare-on.html">
+        
+            compare-on
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="16.3"
+        
+          data-path="man/compare/compare-with.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="compare-with" href="../../man/compare/compare-with.html">
+        
+            compare-with
+          </a>
+      
+      
+    </li>
+  
+
+        </ul>
+      
+    </li>
+  
+    <li class="chapter chapter-root chapter-list"
+        data-level="17"
+        >
+      
+        <span class="chapter-title" data-title="String">String</span>
+      
+      
+        <ul class="articles">
+          
+  
+    <li class="chapter"
+        data-level="17.1"
+        
+          data-path="man/string/append.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="append" href="../../man/string/append.html">
+        
+            append
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="17.2"
+        
+          data-path="man/string/prepend.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="prepend" href="../../man/string/prepend.html">
+        
+            prepend
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="17.3"
+        
+          data-path="man/string/escape-regex.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="escape-regex" href="../../man/string/escape-regex.html">
+        
+            escape-regex
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="17.4"
+        
+          data-path="man/string/lower.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="lower" href="../../man/string/lower.html">
+        
+            lower
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="17.5"
+        
+          data-path="man/string/upper.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="upper" href="../../man/string/upper.html">
+        
+            upper
+          </a>
+      
+      
+    </li>
+  
+
+        </ul>
+      
+    </li>
+  
+    <li class="chapter chapter-root chapter-list"
+        data-level="18"
+        
+          data-path="man/trampoline/trampoline.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="Trampoline" href="../../man/trampoline/trampoline.html">
+        
+            Trampoline
+          </a>
+      
+      
+        <ul class="articles">
+          
+  
+    <li class="chapter"
+        data-level="18.1"
+        
+          data-path="man/trampoline/trampoline-filter.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="trampoline-filter" href="../../man/trampoline/trampoline-filter.html">
+        
+            trampoline-filter
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="18.2"
+        
+          data-path="man/trampoline/trampoline-merge-sort.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="trampoline-merge-sort" href="../../man/trampoline/trampoline-merge-sort.html">
+        
+            trampoline-merge-sort
+          </a>
+      
+      
+    </li>
+  
+
+        </ul>
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="19"
+        
+          data-path="AUTHORS.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="Authors" href="../../AUTHORS.html">
+        
+            Authors
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="20"
+        
+          data-path="LICENSE.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="License" href="../../LICENSE.html">
+        
+            License
+          </a>
+      
+      
+    </li>
+  
+
+  </ul>
+</nav>
+
+  <div class="book-body">
+    
+
+<header class="book-header stack" role="navigation">
+  
+  <a href="" rel="summary"
+    title="Table of Contents" aria-label="Table of Contents"
+    class="summary-toggle panel"
+    onclick="return false">
+    <span class="button-inner">
+      <object type="image/svg+xml" data="../../gitbook/plugins/gitbook-plugin-zambezi-docs/images/icon-summary.svg">
+        Table of Contents
+      </object>
+    </span>
+  </a>
+
+  
+  <div class="book-header-tools panel">
+    
+      
+  <a href="https://github.com/zambezi/fun/edit/projectify/man/array/trampoline-flatten.md" rel="edit"
+    title="Edit this page!" aria-label="Edit this page!"
+    
+    >
+    <span class="button-inner">
+      <object type="image/svg+xml" data="../../gitbook/plugins/gitbook-plugin-zambezi-docs/images/icon-edit.svg">
+        Edit this page!
+      </object>
+    </span>
+  </a>
+
+    
+
+    
+      
+  <a href="../../GLOSSARY.html" rel="glossary"
+    title="Glossary" aria-label="Glossary"
+    
+    >
+    <span class="button-inner">
+      <object type="image/svg+xml" data="../../gitbook/plugins/gitbook-plugin-zambezi-docs/images/icon-glossary.svg">
+        Glossary
+      </object>
+    </span>
+  </a>
+
+    
+  </div>
+</header>
+
+    <div class="body-inner">
+      <main class="page-wrapper" tabindex="-1" role="main">
+        <article class="page-inner">
+        
+        
+        
+          <section class="normal" id="section-">
+          
+            <h1 id="funarraytrampolineflatten"><code>fun/array/trampoline-flatten</code></h1>
+<h2 id="syntax">Syntax</h2>
+<h3 id="parameters">Parameters</h3>
+<h2 id="examples">Examples</h2>
+
+          
+          </section>
+        
+        
+        </article>
+      </main>
+    </div>
+
+    
+
+    
+      
+  <a href="../../man/array/trampoline-filter.html" rel="prev"
+    title="Previous page: trampoline-filter" aria-label="Previous page: trampoline-filter"
+    class="navigation navigation-prev"
+    >
+    <span class="button-inner">
+      <object type="image/svg+xml" data="../../gitbook/plugins/gitbook-plugin-zambezi-docs/images/icon-prev.svg">
+        Previous page: trampoline-filter
+      </object>
+    </span>
+  </a>
+
+    
+    
+      
+  <a href="../../man/array/trampoline-merge-sort.html" rel="next"
+    title="Next page: trampoline-merge-sort" aria-label="Next page: trampoline-merge-sort"
+    class="navigation navigation-next"
+    >
+    <span class="button-inner">
+      <object type="image/svg+xml" data="../../gitbook/plugins/gitbook-plugin-zambezi-docs/images/icon-next.svg">
+        Next page: trampoline-merge-sort
+      </object>
+    </span>
+  </a>
+
+    
+    
+
+<footer class="book-footer panel" role="contentinfo">
+  
+  <a href="" rel=""
+    title="Powered by Zambezi" aria-label="Powered by Zambezi"
+    class="powered-by no-t"
+    onclick="return false">
+    <span class="button-inner">
+      <object type="image/svg+xml" data="../../gitbook/plugins/gitbook-plugin-zambezi-docs/images/icon-powered-by.svg">
+        Powered by Zambezi
+      </object>
+    </span>
+  </a>
+
+</footer>
+
+  </div>
+</div>
+
+        
+
+  
+  <script src="../../gitbook/plugins/gitbook-plugin-zambezi-docs/book.js"></script>
+  
+
+  
+  <script src="../../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+  
+
+  
+  <script src="../../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+  
+
+  
+  <script src="../../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+  
+
+  
+  <script src="../../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+  
+
+
+        
+    </body>
+    
+</html>
