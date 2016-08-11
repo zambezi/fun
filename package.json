@@ -1,6 +1,6 @@
 {
   "name": "@zambezi/fun",
-  "version": "1.4.2-projectify.0",
+  "version": "1.4.2-projectify.1",
   "description": "Functional goodies from the platform team",
   "devDependencies": {
     "ez-doc": "github:zambezi/ez-doc",
