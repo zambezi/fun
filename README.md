@@ -12,4 +12,10 @@ There are plenty of very good libraries to aid with functional programming in Ja
 
 # Installation
 
-TBD
+```bash
+npm install --save-dev @zambezi/fun
+```
+
+# Usage
+
+For usage, have a look at documentation for the individual functions, linked to from the [SUMMARY](SUMMARY.md).
