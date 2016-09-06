@@ -15,7 +15,7 @@ describe('batch', () => {
 
   it('should throw if any parameter is not a function', () => {
     throws(() => {
-      batch(()=> console.log('ok'), '(x_x)', () => console.log('ko'))()
+      batch(()=> 1 + 2, '(x_x)', () => console.log('ko'))()
     })
   })
 
