@@ -9,6 +9,7 @@ Summary
 
 - Composition
   - [batch](man/batch.md)
+  - [and](man/and.md)
 
 - Collection
   - [compare-with](man/compare-with.md)
