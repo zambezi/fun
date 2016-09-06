@@ -1,4 +1,4 @@
-import { deepEqual, strictEqual, throws } from 'assert'
+import { strictEqual, throws } from 'assert'
 import { batch } from '../src'
 
 describe('batch', () => {
