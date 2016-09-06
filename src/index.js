@@ -1,3 +1,4 @@
+export { and } from './and'
 export { batch } from './batch'
 export { compareWith } from './compare-with'
 export { functor } from './functor'
