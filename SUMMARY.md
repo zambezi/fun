@@ -12,6 +12,10 @@ Summary
   - [some-result](man/some-result.md)
   - [and](man/and.md)
 
+- [Trampoline](man/trampoline/trampoline.md)
+  - [trampoline filter](man/trampoline/trampoline-filter.md)
+  - [trampoline merge-sort](man/trampoline/trampoline-merge-sort.md)
+
 - Collection
   - [compare-with](man/compare-with.md)
   - [replace-array-contents](man/replace-array-contents.md)
