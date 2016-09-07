@@ -9,6 +9,7 @@ Summary
 
 - Composition
   - [batch](man/batch.md)
+  - [some-result](man/some-result.md)
   - [and](man/and.md)
 
 - Collection
