@@ -15,3 +15,6 @@ Summary
 - Collection
   - [compare-with](man/compare-with.md)
   - [replace-array-contents](man/replace-array-contents.md)
+
+- Operators
+  - [modulo](man/modulo.md)
