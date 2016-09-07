@@ -43,4 +43,12 @@ describe('property', () => {
 
   })
 
+  it('should return the full object if key is not provided', () => {
+
+    const o = { a: 1 }
+
+    strictEqual(property()(o), o)
+    strictEqual(property(null)(o), o)
+  })
+
 })
