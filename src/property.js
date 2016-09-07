@@ -1,7 +1,5 @@
-import { identity } from './identity'
-
 export function property(k) {
-  if (!k) return identity
+  if (!k) return d => d
   const components = k.split('.')
   return function prop(d) {
     return components.reduce(value, d)
