@@ -11,6 +11,7 @@ Summary
   - [batch](man/batch.md)
   - [some-result](man/some-result.md)
   - [and](man/and.md)
+  - [or](man/or.md)
 
 - [Trampoline](man/trampoline/trampoline.md)
   - [trampoline filter](man/trampoline/trampoline-filter.md)
