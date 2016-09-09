@@ -1,28 +1,38 @@
 {
   "name": "@zambezi/fun",
-  "version": "1.4.2",
-  "description": "Functional goodies from the platform team",
-  "devDependencies": {
-    "ez-doc": "github:zambezi/ez-doc",
-    "grunt": "~0.4.1",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-copy": "~0.4.1",
-    "grunt-contrib-requirejs": "~0.4.1",
-    "grunt-karma": "~0.10.1",
-    "karma": "~0.12.31",
-    "karma-chrome-launcher": "~0.1.7",
-    "karma-mocha": "~0.1.0",
-    "karma-requirejs": "~0.2.2",
-    "karma-sinon-chai": "~0.1.4",
-    "karma-teamcity-reporter": "~0.1.1"
-  },
+  "version": "2.0.0-2",
+  "description": "Functional goodies from the Zambezi team",
+  "keywords": [
+    "functional"
+  ],
+  "main": "dist/fun.js",
+  "homepage": "https://github.com/zambezi/fun",
   "scripts": {
-    "ci-test": "grunt karma:ci-test"
+    "build": "mkdirp dist && rollup -c",
+    "clean": "rimraf dist",
+    "watch": "rollup -c -w",
+    "test": "mocha",
+    "pretest": "npm run clean && npm run build",
+    "prepublish": "npm test"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:zambezi/fun.git"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "6.9.0",
+    "babel-preset-es2015-rollup": "1.1.1",
+    "babel-register": "6.9.0",
+    "babelrc-rollup": "2.0.0",
+    "d3-array": "1.0.1",
+    "mkdirp": "0.5.1",
+    "mocha": "2.5.3",
+    "rimraf": "2.5.3",
+    "rollup": "0.26.3",
+    "rollup-plugin-babel": "2.3.9"
+  },
+  "dependencies": {
+    "underscore": "^1.8.3"
   },
   "license": "MIT"
 }

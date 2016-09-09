@@ -1,12 +1,9 @@
-![Logo](logo.svg?raw=true)
-
-Fun!
-====
+# Fun!
 
 What is fun?
 ------------
 
-A functional utility belt, for Javascript. It's rather lovely, you should try it you'll like it.
+A functional utility belt, for JavaScript. It's rather lovely, you should try it you'll like it.
 
 Why fun?
 --------
