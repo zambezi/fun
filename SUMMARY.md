@@ -5,7 +5,6 @@ Summary
   - [property](man/property.md)
   - [negate](man/negate.md)
   - [functor](man/functor.md)
-  - [identity](man/identity.md)
 
 - Composition
   - [batch](man/batch.md)

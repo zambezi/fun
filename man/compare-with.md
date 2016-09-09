@@ -2,7 +2,7 @@
 
 Create a comparator function from another comparator and an accessor
 
-```
+```javascript
 const second = (l) => l[1]
     , compareOnSecond = compareWith(ascending, second)
 
