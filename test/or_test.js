@@ -1,8 +1,7 @@
 import { strictEqual } from 'assert'
 import { or } from '../src'
 
-describe('or', ()=> {
-
+describe('or', () => {
   it('should return true if 14 is divisible by 2 or 7', () => {
     strictEqual(or(divisibleBy2, divisibleBy7)(14), true)
   })
@@ -15,11 +14,11 @@ describe('or', ()=> {
     strictEqual(or(divisibleBy2, divisibleBy7)(5), false)
   })
 
-  function divisibleBy2(d) {
-    return d % 2 == 0
+  function divisibleBy2 (d) {
+    return d % 2 === 0
   }
 
-  function divisibleBy7(d) {
-    return d % 7 == 0
+  function divisibleBy7 (d) {
+    return d % 7 === 0
   }
 })
