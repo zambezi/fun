@@ -1,11 +1,9 @@
-import functor from './functor'
-
-export function and() {
+export function and () {
   const funs = Array.from(arguments)
 
-  return function and() {
+  return function and () {
     const args = arguments
-        , context = this
+    const context = this
 
     let result
 
@@ -13,7 +11,7 @@ export function and() {
 
     return result
 
-    function call(fun) {
+    function call (fun) {
       return (result = fun.apply(context, args))
     }
   }

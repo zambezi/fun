@@ -1,11 +1,9 @@
-import functor from './functor'
-
-export function or() {
+export function or () {
   const funs = Array.from(arguments)
 
-  return function or() {
+  return function or () {
     const args = arguments
-        , context = this
+    const context = this
 
     let result
 
@@ -13,7 +11,7 @@ export function or() {
 
     return result
 
-    function call(fun) {
+    function call (fun) {
       return (result = fun.apply(context, args))
     }
   }

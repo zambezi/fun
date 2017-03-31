@@ -5,9 +5,9 @@ describe('batch', () => {
   it('should run all the functions', () => {
     const c = counter()
     strictEqual(batch(c, c, c)(), 3)
-    function counter() {
+    function counter () {
       let count = 0
-      return function() {
+      return function () {
         return ++count
       }
     }
@@ -15,7 +15,7 @@ describe('batch', () => {
 
   it('should throw if any parameter is not a function', () => {
     throws(() => {
-      batch(()=> 1 + 2, '(x_x)', () => console.log('ko'))()
+      batch(() => 1 + 2, '(x_x)', () => console.log('ko'))()
     })
   })
 
@@ -38,5 +38,4 @@ describe('batch', () => {
     , 50
     )
   })
-
 })

@@ -1,10 +1,11 @@
-export function trampolineMergeSort(a, comparator=ascending) {
+export function trampolineMergeSort (a, comparator = ascending) {
   return continuedSort(a, d => d)
-  function continuedSort(a, continuation) {
-    var n = a.length
-      , left
-      , right
-      , pivot
+  function continuedSort (a, continuation) {
+    const n = a.length
+
+    let left
+    let right
+    let pivot
 
     if (n <= 1) return continuation(a)
 
@@ -15,27 +16,27 @@ export function trampolineMergeSort(a, comparator=ascending) {
     return continuedSort.bind(
         null
       , left
-      , function processLeft(leftR) {
-          return continuedSort.bind(
+      , function processLeft (leftR) {
+        return continuedSort.bind(
             null
           , right
-          , function processRight(rightR) {
-              return continuation(
+          , function processRight (rightR) {
+            return continuation(
                 fastMerge(
                   leftR
                 , rightR
                 )
               )
-            }
+          }
           )
-        }
+      }
     )
   }
 
-  function fastMerge(a, b) {
-    var result = []
-      , aLength = a.length
-      , bLength = b.length
+  function fastMerge (a, b) {
+    const result = []
+    let aLength = a.length
+    let bLength = b.length
 
     while (aLength || bLength) {
       if (!aLength) {
@@ -55,6 +56,6 @@ export function trampolineMergeSort(a, comparator=ascending) {
   }
 }
 
-function ascending(a, b) {
+function ascending (a, b) {
   return a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN
 }

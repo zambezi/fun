@@ -1,12 +1,12 @@
-export function batch() {
+export function batch () {
   const funcs = arguments
-      , length = funcs.length
+  const length = funcs.length
 
-  return function run() {
+  return function run () {
     const context = this
     let result
 
-    for (var i = 0; i < length;i++) {
+    for (var i = 0; i < length; i++) {
       result = funcs[i].apply(context, arguments)
     }
 
